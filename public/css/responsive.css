@@ -1,0 +1,367 @@
+
+
+/*======================================
+-----Mobile Menu------
+======================================*/
+.navbar-header{
+  position: relative;
+}
+#mobile-nav-open-btn  {
+
+  font-size: 30px;
+  color: #f4c613;
+  right: 0;
+  top: 6px;
+  float: left;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  display: none;
+}
+#mobile-nav {
+  width: 100%;
+  height: 0%;
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 300ms linear;
+  -webkit-transition: all 300ms linear;
+  overflow: hidden;
+  /* display: none; */
+
+}
+#mobile-nav-close-btn {
+  font-family: "Raleway", sans-serif;
+  font-size: 70px;
+  color: #212226;
+  font-weight: 400;
+  cursor: pointer;
+  position: absolute;
+  top: -9px;
+  right: 13px;
+  transition: .3s;
+  -webkit-transition: .3s;
+}
+#mobile-nav-content {
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+}
+#mobile-nav ul li {
+  margin-bottom: 20px;
+}
+
+#mobile-nav a {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  color: #212226;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0 20px 0 0;
+  text-transform: uppercase;
+  display: inline;
+  transition: .3s;
+  -webkit-transition: .3s;
+}
+#mobile-nav a:hover,
+#mobile-nav a:focus,
+#mobile-nav-close-btn:hover,
+#mobile-nav-close-btn:focus {
+  color: #f4c613;
+  background: none;
+}
+.white-nav-top ul.navbar-nav > li.active > a {
+   color: #f4c613;
+   font-weight: 500;
+}
+/*For the Large Screen*/
+@media(min-width: 1200px) and (max-width: 1299px) {}
+/*For the Medium Screen*/
+
+@media (min-width:992px) and (max-width: 1199px) {
+  .vertical-heading h2 {
+    font-size: 25px;
+  }
+  #services-tabs .tab-bg {
+    padding: 16px 30px;
+    min-height: 300px;
+  }
+  .service-tab p {
+    line-height: 20px;
+  }
+
+}
+/*For the small Screen*/
+@media (min-width:768px) and (max-width: 991px) {
+  #home-heading h1 {
+    font-size: 41px;
+  }
+  #home-text p {
+    font-size: 13px;
+  }
+  .btn-general {
+    padding: 8px 35px 8px 35px;
+    font-size: 10px;
+  }
+  .vertical-heading h2{
+    font-size: 29px;
+  }
+
+  #baker-statement h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  /*for services Section */
+  .r-tabs-accordion-title{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .r-tabs-accordion-title a {
+    font-family: "Raleway", sans-serif;
+    font-size: 13px;
+    color: #212226;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 0;
+    text-decoration: none;
+  }
+  .r-tabs-accordion-title.r-tabs-state-active a {
+    color: #f4c613;
+    font-weight: 700;
+    border-bottom: 3px solid #f4c613;
+    padding-bottom: 5px;
+    transition: border-color 300ms linear;
+    -webkit-transition: border-color 300ms linear;
+  }
+  .pricing-table .price h2 {
+    margin: 0 0 0 6px;
+    font-size: 35px;
+  }
+  .stats-item:hover,
+  .stats-item:focus   {
+    background: #f4c613;
+  }
+  .stats-item:hover i,
+  .stats-item:focus i{
+    color: #212226;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  .blog-post .post-meta p {
+  line-height: 14px;
+  }
+}
+/*For the extra small Screen*/
+@media (max-width: 767px) {
+  #mobile-nav-open-btn {
+  display: block;
+  }
+  .navbar {
+    padding: 20px 0;
+  }
+  .white-nav-top {
+    padding: 0;
+  }
+  #home-heading h1{
+    font-size: 40px;
+  }
+
+  #home-text p {
+    font-size: 13px;
+    line-height:  18px;
+    margin: 8px 2px 30px 2px;
+  }
+
+  .btn-general {
+    padding: 12px 46px 12px 46px;
+    font-size: 10px;
+  }
+  .content-box-lg {
+    padding: 90px 0;
+  }
+  .vertical-heading {
+
+    text-align: center;
+  }
+  .vertical-heading h5 {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    display: block;
+    position: static;
+    margin-bottom: 15px;
+  }
+
+  .vertical-heading h2 {
+  font-size: 29px;
+  line-height: normal;
+  margin: 0;
+  }
+  #about-left {
+    margin-bottom: 50px;
+  }
+  #content-box-md {
+    padding: 70px;
+  }
+  .about-item {
+    padding: 55px 30px;
+    margin-bottom: 35px;
+  }
+  .about-item i {
+    font-size: 30px;
+  }
+  .about-item h3 {
+    font-size: 18px;
+  }
+  #team-left .vertical-heading {
+    min-height: 130px;
+  }
+  .skill h4 {
+    font-size: 14px;
+    line-height: 35px;
+  }
+  #baker-statement h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .horizontal-heading {
+    margin-bottom: 40px;
+  }
+  .horizontal-heading h2 {
+    font-size: 30px;
+  }
+  .service, .service .icon {
+    text-align: center;
+  }
+  .service h4 {
+    font-size: 18px;
+  }
+  .r-tabs-accordion-title{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .r-tabs-accordion-title a {
+    font-family: "Raleway", sans-serif;
+    font-size: 13px;
+    color: #212226;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 0;
+    text-decoration: none;
+  }
+  .r-tabs-accordion-title.r-tabs-state-active a {
+    color: #f4c613;
+    font-weight: 700;
+    border-bottom: 3px solid #f4c613;
+    padding-bottom: 5px;
+    transition: border-color 300ms linear;
+    -webkit-transition: border-color 300ms linear;
+  }
+  #services-tabs .tab-bg {
+    text-align: center;
+    padding: 40px 30px;
+  }
+  #services-tabs h2{
+    font-size: 40px;
+  }
+  #services-tabs h3{
+    font-size: 28px;
+  }
+  #portfolio {
+    padding-bottom: 0;
+  }
+  #isotope-filters button{
+    padding-right: 15px;
+  }
+  #testimonial {
+  padding-top: 45px;
+  }
+  #testimonial-slider {
+  top: 0;
+  }
+  #testimonial .vertical-heading {
+  padding: 0;
+  }
+  #testimonial .row {
+  margin: 0;
+  }
+  #testimonial h3 {
+    font-size: 20px;
+  }
+  #testimonial .starts {
+  font-size: 16px;
+  }
+  .author img {
+    width: 80px !important;
+  }
+  .pricing-table {
+    margin-bottom: 30px;
+  }
+  .pricing-table .price h2 {
+  font-size: 28px;
+  margin: 0 0 0 16px;
+  }
+  .stats-item {
+    margin-bottom: 20px;
+    padding: 25px 5px;
+  }
+  .stats-item i {
+  font-size: 30px;
+  }
+  .stats-item h3 {
+  font-size: 24px;
+  }
+  #blog-left {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .blog-post {
+    margin-bottom: 25px;
+  }
+  #contact-left {
+    text-align: center;
+  }
+  .office {
+    margin-bottom: 40px;
+  }
+  ul.office-details li {
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  #home-heading h1 {
+    font-size: 18px;
+  }
+  #home-text p {
+    font-size: 11px;
+    line-height: 16px;
+    margin: 8px 10px 25px 10px;
+  }
+  .vertical-heading h2 {
+    font-size: 20px;
+  }
+  #isotope-filters {
+    text-align: center;
+  }
+  #isotope-filters button {
+  font-size: 10px;
+  padding-right: 14px;
+  }
+  #testimonial h3 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  #testimonial .starts {
+  font-size: 13px;
+  }
+}
+@media (max-width: 320px) {
+  #testimonial h3 {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  #testimonial .starts {
+  font-size: 10px;
+  }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PizzaMania</title>
+
+    <link rel="stylesheet" href="/stylesheet/main.css">
+  </head>
+  <body data-spy="scroll" data-target="#navbarResponsive">
+<!-- HEADER START -->
+<!-- Title-->
+<title>Pizza Mania</title>
+<!-- Favicon-->
+<link rel="shortcut icon" href="/img/favicon_io/favicon.ico">
+<!-- Font Google Link-->
+<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+<!-- Bootstrap css-->
+<link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
+<link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
+<!-- OwlCarousel css-->
+<link rel="stylesheet" href="/css/owl-carousel/owl.carousel.min.css">
+<link rel="stylesheet" href="/css/owl-carousel/owl.theme.default.min.css">
+<!-- Font-Awesome-->
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.css">
+<!-- <link rel="stylesheet" href="css/font-awesome/css/fontawesome.min.css"> -->
+<!-- Magnific Popup-->
+<link rel="stylesheet" href="/css/magnific/magnific-popup.css">
+<!--Responsive Tabs-->
+<link rel="stylesheet" href="/css/responsive-tabs/responsive-tabs.css">
+<!-- Source css File-->
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/responsive.css">
+
+</head>
+<body data-spy="scroll" data-target="#Navigation" data-offset="65">
+<!-- PreLoader-->
+<div id="preloader">
+  <div id="status">&nbsp;</div>
+</div>
+<!-- Header-->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container-fluid">
+      <!-- <div class="site-nav-wrapper"> -->
+        <div class="navbar-header">
+          <span id="mobile-nav-open-btn">&#9776;</span>
+          <a class="navbar-brand smooth-scroll" href="#home">
+            <img src="img/logo.png" alt="brand">
+          </a>
+        </div>
+          <div class="container" id="Navigation">
+            <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav ml-auto">
+                <li><a class="smooth-scroll" href="#home">Home</a></li>
+                <li><a class="smooth-scroll" href="#about">About</a></li>
+                <li><a class="smooth-scroll" href="#team">Team</a></li>
+                <li><a class="smooth-scroll" href="#services">Services</a></li>
+                <li><a class="smooth-scroll" href="#portfolio">Work</a></li>
+                <li><a class="smooth-scroll" href="#blog">Blog</a></li>
+                <li><a class="smooth-scroll" href="#contact">Contact</a></li>
+                <%if(!currentUser){%>
+                <li><a  href="/login">Login</a></li>
+                <li><a  href="/register">SignUp</a></li>
+                <%}else{%>
+                <li><a  href="/">Sign in as <%= currentUser.username %></a></li>
+                <li><a  href="/logout">Log Out</a></li>
+                <%}%>
+
+              </ul>
+            <!-- </div> -->
+          </div>
+        </div>
+        <div id="mobile-nav">
+          <span id="mobile-nav-close-btn">&times</span>
+          <div id="mobile-nav-content">
+            <ul class="nav">
+              <li><a class="smooth-scroll" href="#home">Home</a></li>
+              <li><a class="smooth-scroll" href="#about">About</a></li>
+              <li><a class="smooth-scroll" href="#team">Team</a></li>
+              <li><a class="smooth-scroll" href="#services">Services</a></li>
+              <li><a class="smooth-scroll" href="#portfolio">Work</a></li>
+              <li><a class="smooth-scroll" href="#blog">Blog</a></li>
+              <li><a class="smooth-scroll" href="#contact">Contact</a></li>
+              <%if(!currentUser){%>
+              <li><a  href="/login">Login</a></li>
+              <li><a  href="/register">SignUp</a></li>
+              <%}else{%>
+              <li><a  href="/">Sign in as <%= currentUser.username %></a></li>
+              <li><a  href="/logout">Log Out</a></li>
+              <%}%>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+<!-- Header Ends-->
+
+<!-- HEADER END -->

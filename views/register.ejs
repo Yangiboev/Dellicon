@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
+
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/responsive.css">
+<div class="navbar-header">
+  <span id="mobile-nav-open-btn">&#9776;</span>
+  <a class="navbar-brand smooth-scroll" href="/">
+    <img src="img/logo-dark.png" alt="brand">
+  </a>
+</div>
+<div id="login-land">
+  <div class="horizontal-heading text-center">
+    <h5>Here You Are</h5>
+    <h2>Become Our <strong>Member</strong>!</h2>
+  </div>
+  <div id="login">
+    <form class="" action="/register" method="POST">
+      <% if(error && error.length > 0){ %>
+          <div class="register text-center" role="alert">
+              <p><%= error %></p>
+          </div>
+      <% } %>
+      <% if(success && success.length > 0){ %>
+          <div class="register text-center" role="alert">
+              <p><%= success %></p>
+          </div>
+      <% } %>
+      <div class="row">
+        <div class="col-md-6 col-xs-12">
+          <div class="form-group">
+            <input type="text" class="form-control" id="username" name="username" placeholder="Your Username">
+          </div>
+        </div>
+        <!-- <div class="col-md-6 col-xs-12">
+          <div class="form-group">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email address">
+          </div>
+        </div> -->
+        <!-- <div class="col-md-6 col-xs-12">
+          <div class="form-group">
+            <input type="password" class="form-control" id="phone" name="password" placeholder="Password">
+          </div>
+        </div> -->
+        <div class="col-md-6 col-xs-12">
+          <div class="form-group">
+            <input type="password" name="password" class="form-control"  placeholder="Your Password">
+          </div>
+        </div>
+      </div>
+      <button id="btn-login"class="btn btn-general btn-yellow">Submit</button>
+      <!-- <div id="submit-btn">
+        <a class="btn btn-general btn-yellow" href="" title="Submit" role="button">Submit</a>
+      </div> -->
+    </form>
+  </div>
+</div>
+<%- include ("partials/footer")%>
