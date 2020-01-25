@@ -41,7 +41,7 @@ router.post('/register', [
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     req.flash("error", "Invalid username or password!");
-    console.log(errors);  
+    console.log(errors);
     return res.render("register");
   }else{
     var newUser = new User({username: req.body.username});
@@ -79,7 +79,9 @@ router.get("/login",function(req,res){
 
 router.post("/login", passport.authenticate("local",{
   successRedirect:"/",
-  failureRedirect: "/login"
+  failureRedirect: "/login",
+  badRequestMessage : 'Incorrect username or password.',
+  failureFlash: true
 }),function(req,res){
   res.send("Login happens here!");
 });
