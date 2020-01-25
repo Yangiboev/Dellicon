@@ -9,9 +9,9 @@ var express          = require("express"),
     app              = express();
 //install flash-connect
 var userRoutes       = require("./routes/user");
+var url = process.env.DATABASEURL || "mongodb://localhost:27017/PizzaMania";
 
-
-mongoose.connect("mongodb+srv://Yangiboev:ab2733314@dellicon-xnbol.mongodb.net/test?retryWrites=true&w=majority", {
+mongoose.connect( url , {
   useUnifiedTopology: true,
   useNewUrlParser: true,
   useFindAndModify: false
@@ -20,6 +20,15 @@ mongoose.connect("mongodb+srv://Yangiboev:ab2733314@dellicon-xnbol.mongodb.net/t
   .catch(err => {
   console.log("something");
 });
+// mongoose.connect("mongodb+srv://Yangiboev:ab2733314@dellicon-xnbol.mongodb.net/test?retryWrites=true&w=majority", {
+//   useUnifiedTopology: true,
+//   useNewUrlParser: true,
+//   useFindAndModify: false
+//   })
+//   .then(() => console.log('DB Connected!'))
+//   .catch(err => {
+//   console.log("something");
+// });
 app.set("view engine","ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
