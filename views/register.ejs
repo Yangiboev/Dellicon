@@ -14,17 +14,17 @@
     <h2>Become Our <strong>Member</strong>!</h2>
   </div>
   <div id="login">
-    <form class="" action="/register" method="POST">
-      <% if(error && error.length > 0){ %>
-          <div class="register text-center" role="alert">
-              <p><%= error %></p>
-          </div>
+    <% if(error && error.length > 0){ %>
+      <div class="register text-center" role="alert">
+        <p><%= error %></p>
+      </div>
       <% } %>
       <% if(success && success.length > 0){ %>
-          <div class="register text-center" role="alert">
-              <p><%= success %></p>
-          </div>
-      <% } %>
+        <div class="register text-center" role="alert">
+          <p><%= success %></p>
+        </div>
+        <% } %>
+    <form class="" action="/register" method="POST">
       <div class="row">
         <div class="col-md-6 col-xs-12">
           <div class="form-group">
