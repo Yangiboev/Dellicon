@@ -8,7 +8,7 @@ var express          = require("express"),
     User             = require("./models/user"),
     app              = express();
 //install flash-connect
-// var userRoutes       = require("./routes/user");
+var userRoutes       = require("./routes/user");
 // var url = process.env.DATABASEURL || "mongodb://localhost:27017/PizzaMania" ;
 //
 // mongoose.connect( url , {
