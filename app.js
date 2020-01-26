@@ -8,27 +8,27 @@ var express          = require("express"),
     User             = require("./models/user"),
     app              = express();
 //install flash-connect
-var userRoutes       = require("./routes/user");
-var url = process.env.DATABASEURL || "mongodb://localhost:27017/PizzaMania" ;
-
-mongoose.connect( url , {
-  useUnifiedTopology: true,
-  useNewUrlParser: true,
-  useFindAndModify: false
-  })
-  .then(() => console.log('DB Connected!'))
-  .catch(err => {
-  console.log("something");
-});
-// mongoose.connect("mongodb+srv://Yangiboev:ab2733314@dellicon-xnbol.mongodb.net/test?retryWrites=true&w=majority", {
+// var userRoutes       = require("./routes/user");
+// var url = process.env.DATABASEURL || "mongodb://localhost:27017/PizzaMania" ;
+//
+// mongoose.connect( url , {
 //   useUnifiedTopology: true,
 //   useNewUrlParser: true,
 //   useFindAndModify: false
 //   })
 //   .then(() => console.log('DB Connected!'))
 //   .catch(err => {
-//   console.log("Error has occured " + err);
+//   console.log("something");
 // });
+mongoose.connect("mongodb+srv://Yangiboev:ab2733314@dellicon-xnbol.mongodb.net/test?retryWrites=true&w=majority", {
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+  useFindAndModify: false
+  })
+  .then(() => console.log('DB Connected!'))
+  .catch(err => {
+  console.log("Error has occured " + err);
+});
 app.set("view engine","ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
