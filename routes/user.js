@@ -34,22 +34,26 @@ router.get("/register",function(req,res){
 const { check, validationResult } = require('express-validator');
 
 router.post('/register', [
-  // username must be an email
-  check('username').isEmail(),
+  // email must be an email form
+  check('email').isEmail(),
+
+  // username must be at least 3 chars long
+  // check('username').isLength({ min: 3 }),
+
   // password must be at least 5 chars long
   check('password').isLength({ min: 5 })
 ], (req, res) => {
   // Finds the validation errors in this request and wraps them in an object with handy functions
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
-    req.flash("error", "Invalid username or password!");
+    req.flash("error", "Invalid value username or password!");
     console.log(errors);
     return res.render("register");
   }else{
-    var newUser = new User({username: req.body.username});
+    var newUser = new User({username: req.body.username, email: req.body.email });
       User.register(newUser, req.body.password,function(err, newUser){
         if (err) {
-          req.flash("error", err.message);
+          // req.flash("error", err.message);
           console.log(err);
           return res.render("register");
           // req.flash("error", err.message);

@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
-
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/responsive.css">
 <div class="navbar-header">
@@ -16,34 +15,34 @@
   <div id="login">
     <% if(error && error.length > 0){ %>
       <div class="register text-center" role="alert">
-        <p><%= error %></p>
+        <%= error %>
       </div>
       <% } %>
       <% if(success && success.length > 0){ %>
         <div class="register text-center" role="alert">
-          <p><%= success %></p>
+          <%= success %>
         </div>
         <% } %>
     <form class="" action="/register" method="POST">
       <div class="row">
         <div class="col-md-6 col-xs-12">
           <div class="form-group">
-            <input type="text" class="form-control" id="username" name="username" placeholder="Your Email: exp:asd@gmail.com">
+            <input type="text" class="form-control" id="username" name="username" placeholder="Username">
           </div>
         </div>
-        <!-- <div class="col-md-6 col-xs-12">
-          <div class="form-group">
-            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email address">
-          </div>
-        </div> -->
-        <!-- <div class="col-md-6 col-xs-12">
-          <div class="form-group">
-            <input type="password" class="form-control" id="phone" name="password" placeholder="Password">
-          </div>
-        </div> -->
         <div class="col-md-6 col-xs-12">
           <div class="form-group">
-            <input type="password" name="password" class="form-control"  placeholder="Your Password: at least 5 characters">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email: exp:asd@gmail.com">
+          </div>
+        </div>
+        <div class="col-md-6 col-xs-12">
+          <div class="form-group">
+            <input type="password"  class="form-control"name="password"  placeholder="Your Password: at least 5 characters">
+          </div>
+        </div>
+        <div class="col-md-6 col-xs-12">
+          <div class="form-group">
+            <input type="password" class="form-control" id="phone" placeholder="Confirm Your Password">
           </div>
         </div>
       </div>
