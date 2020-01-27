@@ -1110,10 +1110,10 @@ ul.navbar-nav > li > a:focus {
    font-weight: 500;
 }
 #login-land {
-  padding: 70px 0 40px 0;
+  /* padding: 70px 0 40px 0; */
 }
 #login {
-  padding: 100px 30px;
+  /* padding: 100px 30px; */
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
   border-radius: 4px;
@@ -1132,6 +1132,9 @@ ul.navbar-nav > li > a:focus {
   margin: 10px 0;
   line-height: 24px;
 }
+#login .login-right{
+  padding: 100px 30px;
+}
 
 /*======================================
 ---------Flash------
@@ -1148,4 +1151,45 @@ ul.navbar-nav > li > a:focus {
   font-size: 25px;
   font-weight: 500;
   color: #212226;
+}
+/*======================================
+---------BannerManImg------
+======================================*/
+
+.wt-bannerimages{
+	float: center;
+	width: 50%;
+	/* padding: 99px 0; */
+	margin-left: 200px;
+}
+.wt-bannermanimg{
+	margin: 0;
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.wt-bannermanimg img{
+	width: 100%;
+	display: block;
+}
+.wt-bannermanimgone,
+.wt-bannermanimgtwo{
+	top: 0;
+	left: 0;
+	content: '';
+	position: absolute;
+	animation-name: floating;
+	-webkit-animation-name: floating;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	-webkit-animation-timing-function: linear;
+}
+.wt-bannermanimgone{
+		animation-duration: 7s;
+	-webkit-animation-duration: 7s;
+}
+.wt-bannermanimgtwo{
+		animation-duration: 12s;
+	-webkit-animation-duration: 12s;
 }
