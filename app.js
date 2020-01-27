@@ -20,14 +20,15 @@ var userRoutes       = require("./routes/user");
 //   .catch(err => {
 //   console.log("something");
 // });
-mongoose.connect("mongodb+srv://Yangiboev:ab2733314@dellicon-xnbol.mongodb.net/test?retryWrites=true&w=majority", {
+// mongodb+srv://Yangiboev:19190013@dellicon-xnbol.mongodb.net/test?retryWrites=true&w=majority
+mongoose.connect("mongodb+srv://Yangiboev:19190013@dellicon-xnbol.mongodb.net/test?retryWrites=true&w=majority", {
   useUnifiedTopology: true,
   useNewUrlParser: true,
   useFindAndModify: false
   })
   .then(() => console.log('DB Connected!'))
   .catch(err => {
-  console.log("Error has occured " + err);
+  console.log("Error has occured-- " + err);
 });
 app.set("view engine","ejs");
 app.use(express.static("public"));
