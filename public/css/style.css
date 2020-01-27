@@ -1136,6 +1136,11 @@ ul.navbar-nav > li > a:focus {
   padding: 100px 30px;
 }
 
+#login form .login-left {
+  margin-top: 100px;
+  padding: 0 50px;
+}
+
 /*======================================
 ---------Flash------
 ======================================*/
@@ -1157,10 +1162,10 @@ ul.navbar-nav > li > a:focus {
 ======================================*/
 
 .wt-bannerimages{
-	float: center;
-	width: 50%;
-	/* padding: 99px 0; */
-	margin-left: 200px;
+	width: 75%;
+  position: relative;
+  left: 25%;
+  transform: translateX(-5%);
 }
 .wt-bannermanimg{
 	margin: 0;

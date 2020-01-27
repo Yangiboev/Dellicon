@@ -2,7 +2,8 @@ var express          = require("express");
 var router           = express.Router(),
     passport         = require("passport"),
     middleWare       = require("../middleWare"),
-    User             = require("../models/user");
+    User             = require("../models/user"),
+    Blog             = require("../models/blog");
 
 //===================================
 //AUTHENTICATE
@@ -69,15 +70,25 @@ router.post('/register', [
 });
 
 
-// router.post("/blog", function(req,res){
-//   var newBlog = new Blog ({
-//     name: req.body.name,
-//     email: req.body.email,
-//     subject: req.body.subject,
-//     message: req.body.message,
-//     number: req.body.number
-//   });
-// });
+router.post("/blog", function(req,res){
+  var name      =   req.body.name,
+      email     =   req.body.email,
+      subject   =   req.body.subject,
+      message   =   req.body.message,
+      number    =   req.body.number;
+  var newMessage = { name:name, email:email, subject:subject, message:message, number:number};
+  Blog.create(newMessage, function(err, newMess){
+    if (err) {
+      console.log(err);
+    }
+    else{
+      req.flash("success", "Message was sent,hope that responce will be soon");
+      console.log("Added newly");
+      res.redirect("/");
+    }
+  });
+
+});
 
 router.get("/login",function(req,res){
   res.render("login");
@@ -86,7 +97,7 @@ router.get("/login",function(req,res){
 router.post("/login", passport.authenticate("local",{
   successRedirect:"/",
   failureRedirect: "/login",
-  badRequestMessage : 'Incorrect username or password.',
+  badRequestMessage : 'Invalid username or password!',
   failureFlash: true
 }),function(req,res){
   res.send("Login happens here!");
