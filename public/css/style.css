@@ -492,7 +492,7 @@ ul.social-list li:nth-child(3) a:hover {
 -----Statement------
 ======================================*/
 #statement {
-  background: url("../img/statement.jpg") no-repeat fixed center;
+  background: url("../img/slider1.jpg") no-repeat fixed center;
   background-size: cover;
 }
 #statement .content-box-lg {
@@ -900,7 +900,7 @@ ul.social-list li:nth-child(3) a:hover {
 -----Stats------
 ======================================*/
 #stats {
-  background: url("../img/w.jpg") no-repeat fixed center;
+  background: url("../img/service-tab2.jpg") no-repeat fixed center;
   background-size: cover;
 }
 #stats .content-box-md {
